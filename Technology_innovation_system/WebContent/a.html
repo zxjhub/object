@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+  <title>Layui</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="layui/css/layui.css" media="all">    
+  <script src="layui/layui.js" charset="utf-8"></script>
+   <script type="text/javascript" src="js/dataTool.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <meta charset="utf-8">
+
+</head>
+<body>
+
+</script>
+<script type="text/javascript">
+		layui.use([ 'tree', 'util' ], function() {
+			var tree = layui.tree,util = layui.util;
+			$.get('data.json', function(json) {
+				tree.render({
+					elem : '#tree', //默认是点击节点可进行收缩
+					data : json,
+					//showCheckbox : true	,
+					id : 'diqu',
+					click: function(obj){
+						var data = obj.data;
+						/* layer.msg('状态：'+ obj.state + '<br>节点数据：' + JSON.stringify(data.id)); */
+						window.a.location.href="Search2Servlet?method=search&data="+data.title; 
+					}
+				});
+				//按钮事件
+				util.event('id', {
+					setChecked : function() {
+						tree.setChecked('diqu', [110000,120000,130100]); //勾选指定节点
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<div style="margin-left:250px;width: 1050px;border-color:black">
+
+<div id="tree" class="demo-tree demo-tree-box" style="width:150px;float:left;"></div >
+
+</div >
+
+
+
+
+</body>
+</html>
