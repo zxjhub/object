@@ -1,0 +1,11 @@
+people
+bicycle
+bus
+car
+trees
+buildings
+motorcycles
+umbrellas
+indicator
+cameras
+traffic light

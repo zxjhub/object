@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据可视化demo</title>
+    <link href="../static/styles/common.css" rel="stylesheet">
+    <script src="../static/scripts/Plugin/jquery-3.3.1.min.js"></script>
+    <script src="../static/scripts/Plugin/echarts.min.js"></script>
+    <script src="../static/scripts/Plugin/bmap.min.js"></script>
+    <!--<script src="http://api.map.baidu.com/api?v=2.0&ak=LelFSt6BfykGf8m3PB5zr8LaXAG2cMg6"></script>-->
+    <script src="../static/scripts/common.js"></script>
+    <script src="../static/scripts/index.js"></script>
+    <script src="../static/scripts/Plugin/laydate/laydate.js"></script>
+
+</head>
+<body>
+    <style type="text/css">
+    .div1 {
+        width: 500px;
+        height: 200px;
+        background: #eee;
+        overflow: auto;
+    }
+    </style>
+
+<div class="con left">
+    <!--数据总概-->
+
+    <!--统计分析图-->
+    <div class="div_any">
+        <div class="left div_any01">
+            <div class="div_any_child">
+                <div class="div_any_title"><img src="../static/images/title_1.png">视频总量统计</div>
+                <table style="color: white;margin-top:30px;margin-left: 30px">
+                    <tr>
+                        <td >fps</td>
+                        <td id="fps">:0</td>
+                    </tr>
+                    <tr>
+                        <td>car</td>
+                        <td id="car">:0</td>
+                    </tr>
+                    <tr>
+                        <td>person</td>
+                        <td id="person">:0</td>
+                    </tr>
+                    <tr>
+                        <td>light</td>
+                        <td id="light">:0</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="div_any_child">
+                <div class="div_any_title"><img src="../static/images/title_2.png">实时每帧数量统计</div>
+                <p id="pieChart1" class="p_chart"></p>
+            </div>
+        </div>
+        <div class="div_any02 left ">
+            <div class="div_any_child div_height">
+                <div class="div_any_title any_title_width"><img src="../static/images/title_0.png">可视化视频 </div>
+                <!--<div id="mapChart" style="width:97.5%;height:95%;display: inline-block;padding-left: 1.25%;padding-top:2.2%"></div>-->
+                 <div ><video src="../static/video/t2.mov"  style="top:-120px;width:97.5%;height:95%;display: inline-block;padding-left: 1.25%;padding-top:2.2%" autoplay  controls="controls"></video> </div>
+            </div>
+        </div>
+        <div class="right div_any01">
+            <div class="div_any_child1">
+                <div class="div_any_title"><img src="../static/images/title_3.png">数据采集条数(当日)</div>
+                百度知道是一个基于搜索的互动式知识问答分享平台，于2005年6月21日发布，并于2005年11月8日转为正式版。百度知道一直探索国际化发展，于2012年3月31日发布百度知道台湾版。“百度知道”，是用户自己根据具有针对性地提出问题，通过积分奖励机制发动其他用户，来解决该问题的搜索模式。 同时，这些问题的答案又会进一步作为搜索结果，提供给其他有类似疑问的用户，达到分享知识的效果。
+百度知道的最大特点，就在于和搜索引擎的完美结合，让用户所拥有的隐性知识转化成显性知识，用户既是百度知道内容的使用者，同时又是百度知道的创造者，在这里累积的知识数据可以反映到搜索结果中。通过用户和搜索引擎的相互作用，实现搜索引擎的社区化。
+百度知道也可以看作是对搜索引擎功能的一种补充，让用户头脑中的隐性知识变成显性知识，通过对回答的沉淀和组织形成新的信息库，其中信息可被用户进一步检
+知道是一个基于搜索的互动式知识问答分享平台，于2005年6月21日发布，并于2005年11月8日转为正式版。百度知道一直探索国际化发展，于2012年3月31日发布百度知道台湾版。“百度知道”，是用户自己根据具有针对性地提出问题，通过积分奖励机制发动其他用户，来解决该问题的搜索模式。 同时，这些问题的答案又会进一步作为搜索结果，提供给其他有类似疑问的用户，达到分享知识的效果。
+百度知道的最大特点，就在于和搜索引擎的完美结合，让用户所拥有的隐性知识转化成显性知识，用户既是百度知道内容的使用者，同时又是百度知道的创造者，在这里累积的知识数据可以反映到搜索结果中。通过用户和搜索引擎的相互作用，实现搜索引擎的社区化。
+百度知道也可以看作是对搜索引擎功能的一种补充，让用户头脑中的隐性知识变成显性知识，通过对回答的沉淀和组织形成新的信息库，其中
+                知道是一个基于搜索的互动式知识问答分享平台，于2005年6月21日发布，并于2005年11月8日转为正式版。百度知道一直探索国际化发展，于2012年3月31日发布百度知道台湾版。“百度知道”，是用户自己根据具有针对性地提出问题，通过积分奖励机制发动其他用户，来解决该问题的搜索模式。 同时，这些问题的答案又会进一步作为搜索结果，提供给其他有类似疑问的用户，达到分享知识的效果。
+百度知道的最大特点，就在于和搜索引擎的完美结合，让用户所拥有的隐性知识转化成显性知识，用户既是百度知道内容的使用者，同时又是百度知道的创造者，在这里累积的知识数据可以反映到搜索结果中。通过用户和搜索引擎的相互作用，实现搜索引擎的社区化。
+百度知道也可以看作是对搜索引擎功能的一种补充，让用户头脑中的隐性知识变成显性知识，通过对回答的沉淀和组织形成新的信息库，其中
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+</body>
+</html>
